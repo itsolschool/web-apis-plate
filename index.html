@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Нужно ли нам мобильное приложение?</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .section {
+            background: white;
+            margin: 4em 3em;
+            padding: 3em;
+            border-radius: 1em;
+        }
+
+        body {
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<script src="https://zeptojs.com/zepto.min.js"></script>
+
+<section class="section" id="notifications">
+    <h2 class="text-center">Уведомления</h2>
+    <div class="row">
+        <button id="notification_btn" class="btn btn-block btn-success btn-lg col-6 offset-3">
+            Дай разрешение
+        </button>
+    </div>
+    <p class="text-center">
+        Можно отправлять уведомления
+        <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Notification">прямо из браузера</a>,
+        а можно <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Push_API">отправлять с
+        сервера</a>.
+    </p>
+    <script src="./js/notifications.js"></script>
+</section>
+
+<section class="section" id="geo">
+    <h2 class="text-center">Геолокация</h2>
+    <link
+            rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+    />
+    <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+    ></script>
+    <div class="row">
+        <div id="mapid" style="height: 40vh" class="col-12 col-md-8 offset-md-2 bg-dark mb-4"></div>
+        <button class="btn btn-lg btn-success col-6 offset-3" id="geolocation_btn">Дай разрешение</button>
+    </div>
+    <script src="./js/geolocation.js"></script>
+</section>
+
+
+<!--<section class="section" id="accelerometor">-->
+<!--    <h2 class="text-center">Акселерометр</h2>-->
+
+<!--    <style>-->
+<!--        #accelerometer_cursor {-->
+<!--            transform: translate(0, 0);-->
+<!--            background: purple;-->
+<!--            height: 3rem;-->
+<!--            width: 3rem;-->
+<!--            margin: 10vh auto;-->
+<!--            border-radius: 100%;-->
+<!--        }-->
+<!--    </style>-->
+
+<!--    <div class="row">-->
+<!--        <div class="border rounded border-dark col-8 offset-2 ">-->
+<!--                <div id="accelerometer_cursor"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script src="./js/accelerometer.js"></script>-->
+<!--</section>-->
+
+</body>
+</html>
